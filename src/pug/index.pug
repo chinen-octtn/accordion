@@ -6,4 +6,28 @@ block js
 
 block body
   main
-    p テストファイル
+    .c-accordion
+      button(aria-expanded="false", aria-controls="accordion01").c-accordion__title Accordion Toggle
+
+      .c-accordion__body#accordion01(aria-hidden="true")
+        .c-accordion__inner
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?
+
+    hr.u-hr
+
+    .c-accordion
+      button(aria-expanded="false", aria-controls="accordion02").c-accordion__title--open Accordion Open
+
+      .c-accordion__body#accordion02(aria-hidden="true")
+        .c-accordion__inner
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?
+
+          button(aria-expanded="true", aria-controls="accordion02").c-accordion__title--close Accordion Close
+
+
+    hr.u-hr
+
+    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?
+
