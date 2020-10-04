@@ -1,4 +1,6 @@
 @use './foundation/_define' as *;
+@use './object/utility/utility';
+@use './object/component/accordion';
 
 h1 {
   color: $color-main;
