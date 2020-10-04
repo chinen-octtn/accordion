@@ -50,3 +50,26 @@
     transform: translateY(0);
   }
 }
+
+
+.c-accordion__inner--slidedown {
+  padding: 8px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: height .3s ease-in-out;
+  }
+
+  [aria-hidden="false"] & {
+    &::before {
+      height: 0;
+    }
+  }
+}
