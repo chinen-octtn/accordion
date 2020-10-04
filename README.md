@@ -1,13 +1,8 @@
 # JSとCSSで実装するaccordionのサンプル
 
 ## マークアップ
-アコーディオンを操作するボタンに `aria-expanded` と `aria-controls` 属性をつける
 
-アコーディオンが閉じているときは `aria-expanded="false"`
-
-操作対象のコンテンツ（アコーディオンの中身）には `aria-controls` で指定した名前と同じIDをつける
-
-### マークアップ例
+例
 
 ```
 <button aria-expanded="false" aria-controls="accordion01">Accordion Toggle</button>
@@ -15,11 +10,18 @@
 <div id="accordion01" aria-hidden="true">Accordion contents</div>
 ```
 
+### アコーディオンを操作するボタン
+`aria-expanded` 属性と `aria-controls` 属性をつける
+
+※アコーディオンが閉じているときは `aria-expanded="false"`
+
+### 操作対象のコンテンツ（アコーディオンの中身）
+`aria-controls` で指定した名前と同じIDをつける
+
+
 ## スタイル
-このSampleでは、任意のclassを指定し、CSSセレクタにaria属性を使うことで状態の切り替えと連動するスタイルを定義している
 
-## スタイル例
-
+例
 ```
 .c-accordion__title {
   /* デフォルトのボタンのスタイル */
@@ -30,9 +32,14 @@
 }
 ```
 
+このSampleでは、CSSセレクタにaria属性を使うことで状態と連動してスタイルを切り替えている
+
+class名は任意でOK
+
+
 ## 開発用のタスクランナー実行環境
-node v12.18.4
-npm v6.14.6
+* node v12.18.4
+* npm v6.14.6
 
 ## ローカル開発環境の起動
 
