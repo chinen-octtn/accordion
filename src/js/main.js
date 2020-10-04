@@ -1,3 +1,3 @@
-import {hello} from './_module/sub.js';
+import { accordion } from './_module/accordion.js';
 
-hello();
+accordion();
