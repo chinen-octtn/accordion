@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="index,follow">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="トップページの概要">
+    <meta name="description" content="アコーディオンSampleのマークアップです。JSで要素の状態を切り替え、CSSで見た目の切り替えをしています。">
+    <meta name="twitter:site" content="@chocodogmagic">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://example.com/ogp.png">
-    <meta name="twitter:url" content="https://example.com/">
-    <meta name="twitter:description" content="トップページの概要">
-    <meta name="twitter:title" content="トップページ">
-    <meta property="og:description" content="トップページの概要">
-    <meta property="og:site_name" content="サイト名">
+    <meta name="twitter:image" content="https://avatars1.githubusercontent.com/u/32406502?s=460&amp;u=c95783bbb59dceff3dbdca430e02632c421b18f5&amp;v=4">
+    <meta name="twitter:url" content="https://chinen-octtn.github.io/accordion/">
+    <meta name="twitter:description" content="アコーディオンSampleのマークアップです。JSで要素の状態を切り替え、CSSで見た目の切り替えをしています。">
+    <meta name="twitter:title" content="アコーディオンSample">
+    <meta property="og:description" content="アコーディオンSampleのマークアップです。JSで要素の状態を切り替え、CSSで見た目の切り替えをしています。">
+    <meta property="og:site_name" content="GitHub - chinen-octtn">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://example.com/ogp.png">
-    <meta property="og:url" content="https://example.com/">
-    <meta property="og:title" content="トップページ">
-    <title>トップページ</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/32406502?s=460&amp;u=c95783bbb59dceff3dbdca430e02632c421b18f5&amp;v=4">
+    <meta property="og:url" content="https://chinen-octtn.github.io/accordion/">
+    <meta property="og:title" content="アコーディオンSample">
+    <title>アコーディオンSample</title>
     <link href="./assets/css/style.css" rel="stylesheet">
     <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>アコーディオンSample</h1>
+      <h1>Accordion Sample</h1>
     </header>
     <main>
-      <p>テストファイル</p>
+      <section>
+        <h2>toggle</h2>
+        <div class="c-accordion">
+          <button class="c-accordion__title" aria-expanded="false" aria-controls="accordion01">Accordion Toggle</button>
+          <div class="c-accordion__body" id="accordion01" aria-hidden="true">
+            <div class="c-accordion__inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="u-hr">
+      <section>
+        <h2>open &amp; close</h2>
+        <div class="c-accordion">
+          <button class="c-accordion__title--open" aria-expanded="false" aria-controls="accordion02">Accordion Open</button>
+          <div class="c-accordion__body" id="accordion02" aria-hidden="true">
+            <div class="c-accordion__inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+              <button class="c-accordion__title--close" aria-expanded="true" aria-controls="accordion02">Accordion Close</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="u-hr">
+      <section>
+        <h2>open animation slidedown</h2>
+        <p>Only if the background color is available.</p>
+        <div class="c-accordion">
+          <button class="c-accordion__title" aria-expanded="false" aria-controls="accordion03">Accordion Toggle</button>
+          <div class="c-accordion__body" id="accordion03" aria-hidden="true">
+            <div class="c-accordion__inner--slidedown">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque corporis incidunt enim commodi est, mollitia perferendis! Perferendis vitae deleniti maxime at. Dolorem a laboriosam delectus libero amet voluptate suscipit nostrum?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="u-hr">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam veritatis labore esse facere libero assumenda suscipit iusto porro nesciunt fuga vitae reprehenderit eos qui, odit, placeat eum id ea officiis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam veritatis labore esse facere libero assumenda suscipit iusto porro nesciunt fuga vitae reprehenderit eos qui, odit, placeat eum id ea officiis.</p>
     </main>
   </body>
 </html>

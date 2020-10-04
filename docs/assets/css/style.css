@@ -1,3 +1,68 @@
+.u-hr {
+  margin: 24px 0;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.c-accordion__title--open,
+.c-accordion__title--close, .c-accordion__title {
+  -webkit-appearance: none;
+  background: #fff;
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.c-accordion__title[aria-expanded=true] {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.c-accordion__title--open[aria-expanded=true] {
+  display: none;
+}
+
+.c-accordion__body {
+  margin-top: 8px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s 1s;
+}
+.c-accordion__body[aria-hidden=false] {
+  height: auto;
+}
+
+.c-accordion__inner {
+  padding: 8px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+[aria-hidden=false] .c-accordion__inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.c-accordion__inner--slidedown {
+  padding: 8px;
+  position: relative;
+}
+.c-accordion__inner--slidedown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: height 0.3s ease-in-out;
+}
+[aria-hidden=false] .c-accordion__inner--slidedown::before {
+  height: 0;
+}
+
 h1 {
   color: red;
 }

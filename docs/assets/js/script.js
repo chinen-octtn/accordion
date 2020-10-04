@@ -86,15 +86,15 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/_module/sub.js":
-/*!*******************************!*\
-  !*** ./src/js/_module/sub.js ***!
-  \*******************************/
-/*! exports provided: hello */
+/***/ "./src/js/_module/accordion.js":
+/*!*************************************!*\
+  !*** ./src/js/_module/accordion.js ***!
+  \*************************************/
+/*! exports provided: accordion */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\nfunction hello() {\n  console.log('hello world');\n}\n\n//# sourceURL=webpack:///./src/js/_module/sub.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"accordion\", function() { return accordion; });\nfunction accordion() {\n  // accordionボタンを取得\n  var accordionSwitch = document.querySelectorAll('[aria-expanded]'); // for IE\n\n  var arr = Array.prototype.slice.call(accordionSwitch); // click event\n\n  arr.forEach(function (elm) {\n    elm.addEventListener('click', function (e) {\n      // buttonを無効化\n      e.preventDefault(); // Controlコンテンツを取得\n\n      var bodyId = elm.getAttribute('aria-controls');\n      var body = document.querySelector('#' + bodyId); // Control元（複数）を取得\n\n      var button = document.querySelectorAll('[aria-controls=' + bodyId + ']'); // for IE\n\n      var buttonArr = Array.prototype.slice.call(button); // 状態を判定\n\n      var isVisible = elm.getAttribute('aria-expanded'); // Controlコンテンツの状態切替\n\n      body.setAttribute('aria-hidden', isVisible); // Control元の状態切替\n\n      buttonArr.forEach(function (btn) {\n        if (isVisible === 'true') {\n          btn.setAttribute('aria-expanded', 'false');\n        } else {\n          btn.setAttribute('aria-expanded', 'true');\n        }\n      });\n    });\n  });\n}\n\n//# sourceURL=webpack:///./src/js/_module/accordion.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_sub_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_module/sub.js */ \"./src/js/_module/sub.js\");\n\nObject(_module_sub_js__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_module/accordion.js */ \"./src/js/_module/accordion.js\");\n\nObject(_module_accordion_js__WEBPACK_IMPORTED_MODULE_0__[\"accordion\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ })
 
